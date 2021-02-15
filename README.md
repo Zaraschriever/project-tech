@@ -1,5 +1,7 @@
 # Concept
 
-# Instalatie 
+## Inhoud
 
-# Gebruik
+## Instalatie 
+
+## Gebruik
