@@ -17,3 +17,6 @@ Vervolgens clone je deze repository
 
 
 ## Gebruik
+
+
+## Licence 
