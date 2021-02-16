@@ -20,4 +20,4 @@ Vervolgens clone je deze repository
 
 
 ## License 
-[Apache License 2.0](https://github.com/Zaraschriever/project-tech#license)
+[Apache License 2.0](https://github.com/Zaraschriever/project-tech/blob/main/LICENSE)
