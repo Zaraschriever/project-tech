@@ -1,6 +1,6 @@
 
 ### Table of content
-- Wiki
+- [Wiki](https://github.com/Zaraschriever/project-tech#wiki)
 - Installation
 - Gebruik
 
