@@ -1,8 +1,8 @@
 
 ### Table of content
 - [Wiki](https://github.com/Zaraschriever/project-tech#wiki)
-- [Installation] (https://github.com/Zaraschriever/project-tech#installation)
-- [Gebruik] (https://github.com/Zaraschriever/project-tech#gebruik)
+- [Installation](https://github.com/Zaraschriever/project-tech#installation)
+- [Gebruik](https://github.com/Zaraschriever/project-tech#gebruik)
 
 # Matching application
 
