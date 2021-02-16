@@ -7,7 +7,7 @@
 # Matching application
 
 ## Wiki
-In de wiki hou ik mijn hele proces bij van begin tot het einde, bekijk die hier [Wiki](https://github.com/Zaraschriever/project-tech/wiki).
+In de wiki hou ik mijn hele proces bij van begin tot het einde, bekijk hier mijn [Wiki](https://github.com/Zaraschriever/project-tech/wiki).
 
 ## Installation
 Om de applicatie te gebruiken moet je eerst `NodeJS` en `NPM` op je apparaat geïnstalleerd hebben.
