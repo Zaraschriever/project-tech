@@ -1,0 +1,24 @@
+        {{!-- <form action="">
+            <input type="hidden">
+            <button id="dislike" type="submit"><img src="static/images/kruis.png" alt=""></button>
+        </form>
+        <form action="">
+            <input type="hidden">
+            <button id="like" type="submit"><img src="static/images/hart.png" alt=""></button>            --}}
+        {{!-- </form>
+
+        <form action="">
+            <input type="hidden">
+            <button type="submit" value="false">dislike</button>
+            <button id="myBtn" type="submit" >like</button>
+        </form> --}}
+ 
+ <form id="dislike" method="POST" action="/">
+     <input name="liked" value="false" type="hidden">
+     <button type="submit"></button>
+ </form>
+
+  <form id="like" method="POST" action="/">
+     <input name="liked" value="true" type="hidden">
+     <button type="submit"></button>
+ </form>
