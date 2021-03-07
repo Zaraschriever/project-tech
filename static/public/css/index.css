@@ -1,0 +1,208 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #334E58;
+    color: #334E58;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    background-color: #334E58;
+    height: 4em;   
+}
+
+header img {
+    width: 9em;
+    height: auto;
+    margin-top: 1em;
+    margin-left: 8em;
+}
+
+.matches {
+    width: 2em;
+    margin-left: 0;
+}
+
+section:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    background-color: #EEEEFF;
+    margin: 1em;
+    margin-top: 0;
+    padding: 1em;
+    padding-top: .5em;
+    border-radius: 1em;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.fotohond {
+    width: 100%;
+    height: 18em;
+    margin-top: .5em;
+    border-radius: 1em;
+}
+
+article:nth-of-type(1) p {
+    position: absolute;
+    margin-top: -6.5em;
+    margin-left: 1.5em;
+    background-color: #EEEEFF;
+    opacity: .6;
+    padding: .5em;
+    padding-left: 1em;
+    width: 15em;
+    border-radius: .5em;
+}
+
+article:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -2.8em;
+}
+
+.info {
+    list-style-type: none;
+    padding: 0;
+    margin-top: .3em;
+}
+
+form {
+    position: relative;
+    width: 5em;
+}
+
+.formulier {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formulier img {
+    width: 3em;
+}
+button {
+    width: 5em;
+    height: 5em;
+    background-color: #EEEEFF;
+    border-radius: 5em;
+    margin: .5em;
+}
+
+#dislike button {
+    border: solid 0.4em #DB2738;
+}
+
+#like button {
+    border: solid 0.4em #68A691;
+}
+
+/* section:nth-of-type(1) article:nth-of-type(3) ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: .5em;
+} */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 4em;
+    background-color: #429EA6;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    float: left
+}
+
+.matches {
+    border: 0.1em solid #334E58;
+    border-radius: 1em;
+    padding: .5em;
+    width: 95%;
+    height: 6em;
+    margin-top: 1em;
+}
+
+.matches img {
+    height: 5em;
+    width: auto;
+}
+
+.naam {
+    position: relative;
+    margin-left: 5em;
+    margin-top: -4.5em;
+}
+
+.beschrijving {
+    margin-top: 6em;
+}
+
+.witteh1 {
+    color: white;
+    margin-top: 2em;
+}
+
+.ondertekst {
+    color: #DB2738;
+    text-align: center;
+}
+
+.match {
+    width: 8em;
+    background-color: #429EA6;
+    border-radius: 1em;
+    padding: 0.8em;
+    transform: rotate(-10deg);
+    margin-top: 5em;
+    margin-left: 4em;
+}
+
+.matchfoto {
+    width: 100%;
+    height: auto;
+}
+
+.match2 {
+    position: relative;
+    width: 8em;
+    background-color: white;
+    border-radius: 1em;
+    padding: 0.8em;
+    margin-left: 10em;
+    top: -5em;
+    transform: rotate(10deg);
+}
+
+.matchsection {
+    margin-top: 3em;
+}
+
+.ga {
+    background-color: #DB2738;
+    color: white;
+    width: 8em;
+    height: auto;
+    padding: .5em;
+    font-size: 1.4em;
+    border-radius: .5em;
+    border: none;
+    align-self: center;
+}
