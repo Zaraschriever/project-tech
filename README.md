@@ -1,6 +1,9 @@
 # project-tech
 
 # Matching application
+:dog:
+
+Een "datingsapp" voor het vinden van een nieuw hondje, het baasje maakt een profiel aan voor de hond en jij maakt een profiel aan voor jezelf. Wanneer je elkaar allebei leuk vindt krijg je een match en heb je misschien wel je nieuwe hondje gevonden!
 
 ## Table of content
 - [Wiki](https://github.com/Zaraschriever/project-tech#wiki)
@@ -14,12 +17,17 @@ In de wiki hou ik mijn hele proces bij van begin tot het einde, bekijk hier mijn
 ## Installation
 Om de applicatie te gebruiken moet je eerst `NodeJS` en `NPM` op je apparaat geïnstalleerd hebben.
 
-Vervolgens clone je deze repository
+Vervolgens clone je deze repository;
 
+`git clone https://github.com/lottekoblens/matching-application.git`
 
+run `npm install`
 
 ## Gebruik
 
+Start de server met `npm start`
+
+Ga naar localhost:9020 in je browser
 
 ## License 
 [Apache License 2.0](https://github.com/Zaraschriever/project-tech/blob/main/LICENSE)
