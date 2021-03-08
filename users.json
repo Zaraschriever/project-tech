@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Joep",
+        "age": 1,
+        "image": "joep.jpeg",
+        "ras": "labradoodle",
+        "geslacht": "reu",
+        "beschrijving": "Heel lief reutje, wandelen doet hij heel graag daar geniet hij van dus heel graag wat actieve mensen die heerlijk met haar gaan wandelen."
+    },
+    {
+        "name": "Bobbie",
+        "age": 4,
+        "image": "logo.png",
+        "ras": "Golden getriever",
+        "geslacht": "reu" ,
+        "beschrijving": "Heel lief reutje, wandelen doet hij heel graag daar geniet hij van dus heel graag wat actieve mensen die heerlijk met haar gaan wandelen."
+    }
+        
+]
