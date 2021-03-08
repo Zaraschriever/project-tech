@@ -9,6 +9,13 @@
     {{> form }}    
     <article class="tweede">
         <h2>Informatie</h2>
+{{#if listExists}} 
+  <ul> 
+    {{#each suggestChamps}} 
+      <li class = {{this.lane}}> {{ this.name}} </li> 
+    {{/ each}} 
+  </ul> 
+{{/ if}}        
         <ul class="info">
           <li>Leeftijd: 9 maanden</li>
           <li>Ras: labradoodle</li>

@@ -18,7 +18,7 @@ let db = null;
 async function connectDB() {
   // get URI form env file
   const uri =
-    'mongodb+srv://dbZara:Joepie1805@cluster0.cgla0.mongodb.net/matchingapplication?retryWrites=true&w=majority';
+    'mongodb+srv://<username>:<password>@cluster0.cgla0.mongodb.net/matchingapplication?retryWrites=true&w=majority';
   // make connection to DB
   const options = { useUnifiedTopology: true };
   const client = new MongoClient(uri, options);
@@ -90,11 +90,3 @@ app.use((req, res) => {
 // };
 
 // const newBlogPost = new BlogPost(data);
-
-// newBlogPost.save((error) => {
-//   if (error) {
-//     console.log('Oops, something went wrong');
-//   } else {
-//     console.log('Data has been saved!');
-//   }
-// });
