@@ -19,7 +19,7 @@ Om de applicatie te gebruiken moet je eerst `NodeJS` en `NPM` op je apparaat ge√
 
 Vervolgens clone je deze repository;
 
-`git clone https://github.com/lottekoblens/matching-application.git`
+`git clone https://github.com/Zaraschriever/project-tech.git`
 
 run `npm install`
 
