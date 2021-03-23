@@ -16,30 +16,21 @@ require('dotenv').config();
 let db = null;
 
 async function connectDB() {
-  // get URI form env file
-  const uri =
-    'mongodb+srv://<username>:<password>@cluster0.cgla0.mongodb.net/matchingapplication?retryWrites=true&w=majority';
-  // make connection to DB
-  const options = { useUnifiedTopology: true };
-  const client = new MongoClient(uri, options);
-  await client.connect();
-  db = await client.db(process.env.DB_NAME);
+  try {
+    // get URI form env file
+    const uri =
+      'mongodb+srv://dbZara:Joepie1805@cluster0.cgla0.mongodb.net/matchingapplication?retryWrites=true&w=majority';
+    // make connection to DB
+    const options = { useUnifiedTopology: true };
+    const client = new MongoClient(uri, options);
+    await client.connect();
+    db = await client.db(process.env.DB_NAME);
+  } catch (error) {
+    console.log(error);
+  }
 }
+
 connectDB();
-try {
-  console.log('Connected to database!');
-} catch (error) {
-  console.log(error);
-}
-
-// const uri =
-//   'mongodb+srv://dbZara:Joepie1805@cluster0.cgla0.mongodb.net/matchingapplication?retryWrites=true&w=majority';
-
-// mongoose.Promise = global.Promise;
-// mongoose
-//   .connect(uri)
-//   .then(() => console.log('DB connection succesfull'))
-//   .catch((err) => console.error(err));
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', expbs({ defaultLayout: 'main' }));
@@ -47,16 +38,18 @@ app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, '/views'));
 
 // homepage
-app.get('/', (req, res) => {
-  res.render('index', { title: 'Home Page' });
+app.get('/', async (req, res) => {
+  const users = await db.users.find();
+  console.log(users)
+  res.render('index', { title: 'Home Page', data: users });
 });
 
 app.get('/matches', (req, res) => {
-  res.render('matches', { title: 'Matches' });
+  res.render('matches', { title: 'matches' });
 });
 
 app.get('/match', (req, res) => {
-  res.render('match', { title: 'Match' });
+  res.render('match', { title: 'match' });
 });
 
 app.listen(port, () => {
