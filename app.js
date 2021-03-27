@@ -3,7 +3,8 @@ const express = require('express');
 const slug = require('slug');
 
 const app = express();
-const expbs = require('express-handlebars');
+// const expbs = require('express-handlebars');
+const ejs = require('ejs');
 const path = require('path');
 const bodyParser = require('body-parser');
 
@@ -25,6 +26,7 @@ async function connectDB() {
     const client = new MongoClient(uri, options);
     await client.connect();
     db = await client.db(process.env.DB_NAME);
+    console.log('verbinding is gelukt');
   } catch (error) {
     console.log(error);
   }
@@ -33,14 +35,15 @@ async function connectDB() {
 connectDB();
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
-app.engine('handlebars', expbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
+// app.engine('handlebars', expbs({ defaultLayout: 'main' }));
+// app.set('view engine', 'handlebars');
+app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
 // homepage
 app.get('/', async (req, res) => {
-  const users = await db.users.find();
-  console.log(users)
+  const users = await db.collection('users').find();
+  console.log(users);
   res.render('index', { title: 'Home Page', data: users });
 });
 

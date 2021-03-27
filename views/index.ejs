@@ -1,0 +1,42 @@
+<%- include('layouts/main.ejs'); %>
+<%- include('partials/header.ejs'); %>
+
+
+<section>
+    <article>
+        <h1><%= dog.name %></h1>
+        <img class="fotohond" src="<%= dog.img %>" alt="">
+        <p><%= dog.bio %></p>
+        <!-- <p>Hi ik ben joep en ik zoek een nieuw baasje.</p> -->
+    </article>  
+    <%- include('partials/form.ejs'); %>  
+    <article class="tweede">
+        <h2>Informatie</h2>
+<!-- {{#if listExists}} 
+  <ul> 
+    {{#each suggestChamps}} 
+      <li class = {{this.lane}}> {{ this.name}} </li> 
+    {{/ each}} 
+  </ul> 
+{{/ if}}         -->
+        <!-- <ul class="info">
+          <li>Leeftijd: 9 maanden</li>
+          <li>Ras: labradoodle</li>
+          <li>Geslacht: Reu</li>
+          <li>Prijs: €800</li>
+        </ul>    -->
+        <ul class="info">
+          <li>Leeftijd: <%= dog.age %></li>
+          <li>Ras: <%= dog.ras %></li>
+          <li>Geslacht: <%= dog.gender %></li>
+          <li>Prijs: <%= dog.price %></li>
+        </ul> 
+    </article>
+    <article>
+        <h2>Beschrijving</h2>
+        <p><%= dog.description %></p>
+        <!-- <p>Heel lief reutje, wandelen doet hij heel graag daar geniet hij van dus heel graag wat actieve mensen die heerlijk met haar gaan wandelen.</p> -->
+    </article>
+</section>
+
+<%- include('partials/footer.ejs'); %>

@@ -1,9 +1,13 @@
 body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   
     margin: 0;
     padding: 0;
     background-color: #334E58;
     color: #334E58;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 375px;
 }
 
 header {
@@ -118,7 +122,7 @@ button {
 footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 375px;
     height: 4em;
     background-color: #429EA6;
 }
