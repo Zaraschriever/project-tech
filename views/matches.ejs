@@ -1,12 +1,22 @@
 <%- include('layouts/main.ejs'); %>
 <%- include('partials/header.ejs'); %>
-<section>
-        <h1>Dit zijn jou matches</h1>
 
-<article class="matches">
-    <img src="static/images/joep.jpeg" alt="">
-    <h2 class="naam">name</h2>
-    <p class="beschrijving">hxsbxhvsxh</p>
-    <button>Verwijder match</button>
-    <button>Chatten</button>
-</article>
+<section class="matchpagina">
+    <h1>Dit zijn jouw matches</h1>
+
+<ul id="match1">
+    <% likedDogs.forEach(function(likedDogs) { %>
+        <li>
+            <img class="fotohond" src="<%= likedDogs.img %>" alt="">
+            <h2><%= likedDogs.name %></h2>
+            <p><%= likedDogs.description %></p>
+            <button id="verwijder">Verwijder match</button>           
+        </li>
+    <% }); %>    
+</ul>
+</section>
+
+
+
+<script src="/static/js/script.js"></script>
+

@@ -10,6 +10,19 @@ body{
     width: 375px;
 }
 
+/* fonts */
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* header */
 header {
     display: flex;
     align-items: baseline;
@@ -24,31 +37,23 @@ header img {
     margin-left: 8em;
 }
 
-.matches {
+.hartje {
+    position: absolute;
     width: 2em;
-    margin-left: 0;
+    margin-left: 3em;
 }
 
-section:nth-of-type(1) {
+/* profielen */
+section {
+    position: absolute;
     display: flex;
     flex-direction: column;
     background-color: #EEEEFF;
     margin: 1em;
-    margin-top: 0;
+    margin-top: 53em;
     padding: 1em;
     padding-top: .5em;
     border-radius: 1em;
-}
-
-h1 {
-    font-size: 1.5em;
-    text-align: center;
-    margin: 0;
-}
-
-h2 {
-    font-size: 1.2em;
-    margin: 0;
 }
 
 .fotohond {
@@ -56,11 +61,11 @@ h2 {
     height: 18em;
     margin-top: .5em;
     border-radius: 1em;
+    background-size: cover;
 }
 
-article:nth-of-type(1) p {
-    position: absolute;
-    margin-top: -6.5em;
+.bio {
+    margin-top: -6em;
     margin-left: 1.5em;
     background-color: #EEEEFF;
     opacity: .6;
@@ -70,11 +75,15 @@ article:nth-of-type(1) p {
     border-radius: .5em;
 }
 
-article:nth-of-type(2) {
+.tweede {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: -2.8em;
+}
+
+.derde {
+    margin-bottom: 5em;
 }
 
 .info {
@@ -83,9 +92,11 @@ article:nth-of-type(2) {
     margin-top: .3em;
 }
 
+/* formulier */
 form {
     position: relative;
     width: 5em;
+    margin-top: -1.5em;
 }
 
 .formulier {
@@ -97,6 +108,7 @@ form {
 .formulier img {
     width: 3em;
 }
+
 button {
     width: 5em;
     height: 5em;
@@ -113,29 +125,14 @@ button {
     border: solid 0.4em #68A691;
 }
 
-/* section:nth-of-type(1) article:nth-of-type(3) ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: .5em;
-} */
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 375px;
-    height: 4em;
-    background-color: #429EA6;
+/* matchpagina */
+.matchpagina {
+    position: relative;
+    width: 83vw;
+    margin-top: 0;
 }
 
-footer ul {
-    list-style-type: none;
-}
-
-footer ul li {
-    float: left
-}
-
-.matches {
+#match1 {
     border: 0.1em solid #334E58;
     border-radius: 1em;
     padding: .5em;
@@ -144,20 +141,6 @@ footer ul li {
     margin-top: 1em;
 }
 
-.matches img {
-    height: 5em;
-    width: auto;
-}
-
-.naam {
-    position: relative;
-    margin-left: 5em;
-    margin-top: -4.5em;
-}
-
-.beschrijving {
-    margin-top: 6em;
-}
 
 .witteh1 {
     color: white;
@@ -209,4 +192,68 @@ footer ul li {
     border-radius: .5em;
     border: none;
     align-self: center;
+}
+
+/* matches */
+#match1 img {
+    width: 6em;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+#match1 h2 {
+    position: relative;
+    margin-left: 5.5em;
+    margin-top: -5.2em;
+}
+
+#match1 p {
+    position: relative;
+    margin-left: 8.5em;
+    margin-top: -.1em;
+    font-size: 0.8em;
+}
+
+#match1 button {
+    width: 10em;
+    height: 2em;
+    border-radius: .5em;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: .6em;
+    margin: 0;
+    margin-left: 20em;
+    margin-top: -2em;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 375px;
+    height: 4em;
+    background-color: #429EA6;
+    z-index: 100;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    color: white;
+}
+
+footer li:nth-of-type(2) {
+    background-color: #334E58;
+    border: solid 0.2em white;
+    border-radius: 3em;
+    padding: 1em;
+    margin-top: -2em;
+}
+
+footer img {
+    width: 2em;
 }

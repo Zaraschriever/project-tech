@@ -1,0 +1,26 @@
+<%- include('layouts/main.ejs'); %>
+<%- include('partials/header.ejs'); %>
+
+<section id="user1">
+  <article>
+      <h1>Joep</h1>
+      <img class="fotohond" src="static/images/joep.jpeg" alt="">
+      <p>Hi ik zoek een nieuw baasje.</p>
+  </article>  
+  <%- include('partials/form.ejs'); %>  
+  <article class="tweede">
+      <h2>Informatie</h2>     
+      <ul class="info">
+        <li>Leeftijd: 9 maanden</li>
+        <li>Ras: labradoodle</li>
+        <li>Geslacht: Reu</li>
+        <li>Prijs: €800</li>
+      </ul> 
+  </article>
+  <article>
+      <h2>Beschrijving</h2>
+      <p>hgyugygu</p>
+  </article>
+</section>
+
+<%- include('partials/footer.ejs'); %>

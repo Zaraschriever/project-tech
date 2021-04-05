@@ -6,6 +6,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* header */
 header {
     display: flex;
     align-items: baseline;
@@ -20,15 +21,16 @@ header img {
     margin-left: 8em;
 }
 
-.matches {
+/* .matches {
     width: 2em;
     margin-left: 0;
-}
+} */
 
-section:nth-of-type(1) {
+/* section op elke pagina */
+section {
     display: flex;
     flex-direction: column;
-    background-color: #EEEEFF;
+    background-color: black;
     margin: 1em;
     margin-top: 0;
     padding: 1em;
@@ -36,6 +38,7 @@ section:nth-of-type(1) {
     border-radius: 1em;
 }
 
+/* fonts */
 h1 {
     font-size: 1.5em;
     text-align: center;
@@ -47,12 +50,12 @@ h2 {
     margin: 0;
 }
 
-.fotohond {
-    width: 100%;
+/* .fotohond {
+    width: 18em;
     height: 18em;
     margin-top: .5em;
     border-radius: 1em;
-}
+} */
 
 article:nth-of-type(1) p {
     position: absolute;
