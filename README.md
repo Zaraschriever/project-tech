@@ -21,11 +21,11 @@ Vervolgens clone je deze repository;
 
 `git clone https://github.com/Zaraschriever/project-tech.git`
 
-run `npm install`
+run `npm install` om alle packages te installeren
 
 ## Gebruik
 
-Start de server met `npm start`
+Start de server in de terminal met `npm start`
 
 Ga naar localhost:9020 in je browser
 
