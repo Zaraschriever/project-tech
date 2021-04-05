@@ -10,7 +10,11 @@
             <img class="fotohond" src="<%= likedDogs.img %>" alt="">
             <h2><%= likedDogs.name %></h2>
             <p><%= likedDogs.description %></p>
-
+            <form id="delete" action="/delete" method="POST">
+                <input name="liked" type="hidden" value="DELETE">
+                <input name="id" type="hidden" value="id">
+                <button type="submit" id="verwijder">Verwijder match</button>  
+            </form>         
         </li>
     <% }); %>    
 </ul>

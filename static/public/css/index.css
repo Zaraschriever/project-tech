@@ -36,6 +36,7 @@ section {
     padding: 1em;
     padding-top: .5em;
     border-radius: 1em;
+    height: auto;
 }
 
 /* fonts */
