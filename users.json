@@ -1,6 +1,6 @@
 [
     {
-        "_id": 1,
+        "id": "1",
         "name": "Joep",
         "img": "/static/images/joep.jpeg",
         "bio": "Hi ik ben joep en ik zoek een nieuw baasje.",
@@ -14,7 +14,7 @@
         "likedYou": true
     },
     {
-        "_id": 2,
+        "id": "2",
         "name": "Bella",
         "img": "/static/images/Terrier.jpg",
         "bio": "Wordt jij mijn nieuwe baasje?",
@@ -28,7 +28,7 @@
         "likedYou": false
     },
     {
-        "_id": 3,
+        "id": "3",
         "name": "Pip",
         "img": "/static/images/golden-retriever.jpg",
         "bio": "Ik zoek een nieuw huisje..",
@@ -42,7 +42,7 @@
         "likedYou": true
     },
     {
-        "_id": 4,
+        "id": "4",
         "name": "Lola",
         "img": "/static/images/beagle.jpg",
         "bio": "Ik hou van eten en knuffelen",
@@ -56,7 +56,7 @@
         "likedYou": true
     },
     {
-        "_id": 5,
+        "id": "5",
         "name": "Max",
         "img": "/static/images/teckel.jpg",
         "bio": "Ik heb ",
@@ -70,7 +70,7 @@
         "likedYou": true
     },
     {
-        "_id": 6,
+        "id": "6",
         "name": "Claartje",
         "img": "/static/images/poedel.jpg",
         "bio": "Ik zoek een nieuw gezinnetje.",
@@ -84,7 +84,7 @@
         "likedYou": true
     },
     {
-        "_id": 7,
+        "id": "7",
         "name": "Balou",
         "img": "/static/images/buldog.jpg",
         "bio": "Ik ben liever dan ik eruit zie.",
@@ -98,7 +98,7 @@
         "likedYou": false
     },
     {
-        "_id": 8,
+        "id": "8",
         "name": "Bobby",
         "img": "/static/images/springerspaniel.jpg",
         "bio": "Heb jij een gezellig huisje voor mij?",
@@ -112,7 +112,7 @@
         "likedYou": false
     },
     {
-        "_id": 9,
+        "id": "9",
         "name": "Lizzy",
         "img": "/static/images/boomer.jpg",
         "bio": "Ik ben op zoek naar een ander huisje!",

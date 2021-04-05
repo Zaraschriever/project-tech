@@ -85,7 +85,7 @@ app.get('/matches', async (req, res) => {
   app.post('/dislike', (req, res) => {
     console.log(req.body);
     DogModel
-      .findOneAndUpdate({ userID: req.body.userID }, { $set: { visited: true } })
+      .findOneAndUpdate({ _id: req.body.id }, { $set: { visited: true } })
       .then((data) => {
         res.redirect('/');
       });
@@ -94,14 +94,9 @@ app.get('/matches', async (req, res) => {
   app.post('/like', (req, res, liked, likedYou) => {
     console.log(req.body);
     DogModel
-      .findOneAndUpdate({ userID: req.body.userID }, { $set: { liked: true } })
+      .findOneAndUpdate({ _id: req.body.id }, { $set: { liked: true } })
       .then((data) => {
-        if (likedYou == true) {
-          res.redirect('/match');
-        }
-        else {
-          res.redirect('/');
-        }
+        res.redirect('/');
       });
   })
 

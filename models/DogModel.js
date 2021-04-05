@@ -5,41 +5,41 @@ const { Schema } = mongoose;
 
 // Mongoose schema
 const DogSchema = new Schema({
-  id: {
+  _id: {
     type: String,
-    requierd: true,
+    required: true,
   },
   name: {
     type: String,
-    requierd: true,
+    required: true,
   },
   img: {
     type: String,
-    requierd: true,
+    required: true,
   },
   bio: {
     type: String,
-    requierd: true,
+    required: true,
   },
   age: {
     type: Number,
-    requierd: true,
+    required: true,
   },
   breed: {
     type: String,
-    requierd: true,
+    required: true,
   },
   gender: {
     type: String,
-    requierd: true,
+    required: true,
   },
   price: {
     type: Number,
-    requierd: true,
+    required: true,
   },
   description: {
     type: String,
-    requierd: true,
+    required: true,
   },
   liked: {
     type: Boolean,
