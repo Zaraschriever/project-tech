@@ -37,7 +37,6 @@ mongoose
 app.get('/', async (req, res) => {
   try {
     const allUsers = await findAllDogsNotVisited();
-    // const firstUser = allUsers[0];
     const dogs = allUsers[Math.floor(Math.random() * allUsers.length)];
     const userID = allUsers[Math.floor(Math.random() * allUsers.length)]._id;
     res.render('index', { title: 'Home Page', dogs, userID,});
@@ -91,7 +90,7 @@ app.get('/matches', async (req, res) => {
       });
   })
 
-  app.post('/like', (req, res, liked, likedYou) => {
+  app.post('/like', (req, res) => {
     console.log(req.body);
     DogModel
       .findOneAndUpdate({ _id: req.body.id }, { $set: { liked: true } })

@@ -6,7 +6,7 @@ const { Schema } = mongoose;
 // Mongoose schema
 const DogSchema = new Schema({
   _id: {
-    type: String,
+    type: mongoose.ObjectId,
     required: true,
   },
   name: {
