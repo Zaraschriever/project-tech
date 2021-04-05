@@ -37,29 +37,33 @@ mongoose
 app.get('/', async (req, res) => {
   try {
     const allUsers = await findAllDogsNotVisited();
-    const firstUser = allUsers[0];
-    const userID = allUsers[0]._id;
-    res.render('index', { title: 'Home Page', firstUser, userID, });
+    // const firstUser = allUsers[0];
+    const dogs = allUsers[Math.floor(Math.random() * allUsers.length)];
+    const userID = allUsers[Math.floor(Math.random() * allUsers.length)]._id;
+    res.render('index', { title: 'Home Page', dogs, userID,});
   }
   catch (error) {
     console.log(error);
+    res.redirect('/nomoredogs');
   }
   });
 
 app.get('/match', async (req, res) => {
   try {
-    res.render('match', { title: 'Home Page'});
+    res.render('match', { title: 'Home Page',});
   }
   catch (error) {
     console.log(error);
   }
   });
 
+   
+
 // matches / show liked dogs
 app.get('/matches', async (req, res) => {
   try {
     const likedDogs = await findAllLikedDogs();
-    if (likedDogs.length === 3) {
+    if (likedDogs.length === 0) {
       throw new Error('Required');
     }
     res.render('matches', {
@@ -68,6 +72,7 @@ app.get('/matches', async (req, res) => {
     });
   } catch (error) {
     console.log(error);
+    res.redirect('/nomatches');
   }
 })
 
@@ -86,59 +91,61 @@ app.get('/matches', async (req, res) => {
       });
   })
 
-  app.post('/like', (req, res, liked) => {
+  app.post('/like', (req, res, liked, likedYou) => {
     console.log(req.body);
     DogModel
       .findOneAndUpdate({ userID: req.body.userID }, { $set: { liked: true } })
       .then((data) => {
-        res.redirect('/');
+        if (likedYou == true) {
+          res.redirect('/match');
+        }
+        else {
+          res.redirect('/');
+        }
       });
   })
 
-// like
-// app.post('/like', (req, res) => {
-//     likedAndVisitedToTrue(req.body.id, req.body.liked);
-//     res.redirect('/');
-//     console.log(req.body.liked)
-//   })
 
-// dislike
-// function unlike(userID) {
-//   DogModel
-//     .findOneAndUpdate({ id: userID }, { $set: { liked: false } })
-//     .then((data) => {
-//       console.log(data);
-//       });
-// }  
-
-// like
-// function likedAndVisitedToTrue(req, res, id, liked) {
-//   DogModel
-//     .findOneAndUpdate({ id }, { $set: { liked, visited: true } })
-//     .then((data) => {
-//       console.log(data);
-//       res.redirect('/');
-//     });
-//   console.log(liked)  
-// }
-
-
-async function findAllDogsNotVisited() {
-    const data = await DogModel.find({ visited: false }).lean();
-    return data;
-    }
-    
-async function findAllLikedDogs() {
-  const data = await DogModel.find({ liked: true }).lean();
-  console.log(data);
-  return data;
+// rout 
+app.get('/nomatches', async (req, res) => {
+  try {
+    res.render('nomatches', { title: 'Home Page',});
   }
+  catch (error) {
+    console.log(error);
+  }
+  });  
 
-// 404 page
+
+// route to page if there are no more dogs to display
+app.get('/nomoredogs', async (req, res) => {
+  try {
+    res.render('nomoredogs', { title: 'Home Page',});
+  }
+  catch (error) {
+    console.log(error);
+  }
+  }); 
+
+
+// error page
 app.use((req, res) => {
   res.status(404).send('404 Not Found');
 });
 
+async function findAllDogsNotVisited() {
+  const data = await DogModel.find({ visited: false }).lean();
+  return data;
+  }
+  
+async function findAllLikedDogs() {
+const data = await DogModel.find({ liked: true, likedYou: true }).lean();
+console.log(data);
+return data;
+}
+
+
+//port listen to 9020
 app.listen(port, () => {
   console.log('Server is starting at port', port);
 });

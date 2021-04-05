@@ -3,23 +3,23 @@
 
 <section>
   <article>
-      <h1><%= firstUser.name %></h1>
-      <img class="fotohond" src="<%= firstUser.img %>" alt="">
-      <p class="bio"><%= firstUser.bio %></p>
+      <h1><%= dogs.name %></h1>
+      <img class="fotohond" src="<%= dogs.img %>" alt="">
+      <p class="bio"><%= dogs.bio %></p>
   </article>  
   <%- include('partials/form.ejs'); %>  
   <article class="tweede">
       <h2>Informatie</h2>
       <ul class="info">
-        <li>Leeftijd: <%= firstUser.age %></li>
-        <li>Ras: <%= firstUser.breed %></li>
-        <li>Geslacht: <%= firstUser.geslacht %></li>
-        <li>Prijs: € <%= firstUser.price %></li>
+        <li>Leeftijd: <%= dogs.age %></li>
+        <li>Ras: <%= dogs.breed %></li>
+        <li>Geslacht: <%= dogs.geslacht %></li>
+        <li>Prijs: € <%= dogs.price %></li>
       </ul> 
   </article>
   <article class="derde">
       <h2>Beschrijving</h2>
-      <p><%= firstUser.description %></p>
+      <p><%= dogs.description %></p>
   </article>
 </section>
 
