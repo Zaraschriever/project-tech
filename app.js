@@ -38,7 +38,7 @@ app.get('/', async (req, res) => {
   try {
     const allUsers = await findAllDogsNotVisited();
     const firstUser = allUsers[0];
-    const userID = allUsers[0].id;
+    const userID = allUsers[0]._id;
     res.render('index', { title: 'Home Page', firstUser, userID, });
   }
   catch (error) {
@@ -72,36 +72,55 @@ app.get('/matches', async (req, res) => {
 })
 
 // dislike
-app.post('/dislike', (req, res) => {
-    unlike(req.body.id);
-    res.redirect('/');
-  })  
-
-// like
-app.post('/like', (req, res) => {
-    likedAndVisitedToTrue(req.body.id, req.body.liked);
-    res.redirect('/');
-    console.log(req.body.liked)
+// app.post('/dislike', (req, res) => {
+//     unlike(req.body.id);
+//     res.redirect('/');
+//   }) 
+  
+  app.post('/dislike', (req, res) => {
+    console.log(req.body);
+    DogModel
+      .findOneAndUpdate({ userID: req.body.userID }, { $set: { visited: true } })
+      .then((data) => {
+        res.redirect('/');
+      });
   })
 
-// dislike
-function unlike(userID) {
-  DogModel
-    .findOneAndUpdate({ id: userID }, { $set: { liked: false } })
-    .then((data) => {
-      console.log(data);
+  app.post('/like', (req, res, liked) => {
+    console.log(req.body);
+    DogModel
+      .findOneAndUpdate({ userID: req.body.userID }, { $set: { liked: true } })
+      .then((data) => {
+        res.redirect('/');
       });
-}  
+  })
 
 // like
-function likedAndVisitedToTrue(id, liked) {
-  DogModel
-    .findOneAndUpdate({ id }, { $set: { liked, visited: true } })
-    .then((data) => {
-      console.log(data);
-    });
-  console.log(liked)  
-}
+// app.post('/like', (req, res) => {
+//     likedAndVisitedToTrue(req.body.id, req.body.liked);
+//     res.redirect('/');
+//     console.log(req.body.liked)
+//   })
+
+// dislike
+// function unlike(userID) {
+//   DogModel
+//     .findOneAndUpdate({ id: userID }, { $set: { liked: false } })
+//     .then((data) => {
+//       console.log(data);
+//       });
+// }  
+
+// like
+// function likedAndVisitedToTrue(req, res, id, liked) {
+//   DogModel
+//     .findOneAndUpdate({ id }, { $set: { liked, visited: true } })
+//     .then((data) => {
+//       console.log(data);
+//       res.redirect('/');
+//     });
+//   console.log(liked)  
+// }
 
 
 async function findAllDogsNotVisited() {
