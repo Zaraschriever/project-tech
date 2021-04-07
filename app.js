@@ -22,7 +22,7 @@ app.set('views', path.join(__dirname, '/views'))
 const uri = process.env.MONGO_URI;
 mongoose.Promise = global.Promise;
 mongoose
-  .connect(uri, {
+  .connect(process.env.MONGO_URI || uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -141,6 +141,10 @@ async function findAllMatches() {
   const data = await DogModel.find({ liked: true, likedYou: true }).lean();
   console.log(data);
   return data;
+}
+
+if (process.env.NODE_ENV === 'production') {
+  
 }
 
 //port listen to 9020
