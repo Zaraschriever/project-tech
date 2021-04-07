@@ -30,7 +30,7 @@
     {
         "id": "3",
         "name": "Pip",
-        "img": "/static/images/golden-retriever.jpg",
+        "img": "/static/images/golden-retriever.jpeg",
         "bio": "Ik zoek een nieuw huisje..",
         "age": 2,
         "breed": "Golden retriever",
@@ -59,7 +59,7 @@
         "id": "5",
         "name": "Max",
         "img": "/static/images/teckel.jpg",
-        "bio": "Ik heb ",
+        "bio": "Ik heb korte poten maar hou wel van lange wandelingen",
         "age": 4,
         "breed": "Teckel",
         "geslacht": "Reu",
@@ -78,7 +78,7 @@
         "breed": "Poedel",
         "geslacht": "Teef",
         "price": "€870",
-        "description": "Algemeen beeld Raskenmerken De poedel is een atletisch gebouwde hond met een soepel bewegingsapparaat en heeft een gedurende het hele leven doorgroeiende vacht. Ze zijn uiterst intelligent en leergierig en daarmee goed inzetbaar voor sport en werk.",
+        "description": "Algemeen beeld Raskenmerken De poedel is een atletisch gebouwde hond met een soepel bewegingsapparaat en heeft een gedurende het hele leven doorgroeiende vacht.",
         "visited": false,
         "liked": false,
         "likedYou": true
@@ -106,7 +106,7 @@
         "breed": "Springer spaniel",
         "geslacht": "Reu",
         "price": "€500",
-        "description": "De Engelse springer spaniël is een hond die hoort bij de staande jachthonden, de spaniels en de retrievers. Het is een hond die erg intelligent is, maar hij is ook actief en erg vriendelijk. De honden kunnen goed overweg met kinderen.",
+        "description": "De Engelse springer spaniël is een hond die hoort bij de staande jachthonden, de spaniels en de retrievers. Het is een hond die erg intelligent is, maar hij is ook actief en erg vriendelijk.",
         "visited": false,
         "liked": false,
         "likedYou": false

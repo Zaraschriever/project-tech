@@ -45,12 +45,12 @@ header img {
 
 /* profielen */
 section {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: #EEEEFF;
     margin: 1em;
-    margin-top: 53em;
+    margin-top: 0;
     padding: 1em;
     padding-top: .5em;
     border-radius: 1em;
@@ -126,30 +126,24 @@ button {
 }
 
 /* matchpagina */
+
 .matchpagina {
     position: relative;
     width: 83vw;
     margin-top: 0;
+    background-color: #334E58;
 }
-
-#match1 {
-    border: 0.1em solid #334E58;
-    border-radius: 1em;
-    padding: .5em;
-    width: 95%;
-    height: 6em;
-    margin-top: 1em;
-}
-
 
 .witteh1 {
     color: white;
     margin-top: 2em;
+    font-family: cursive;
 }
 
 .ondertekst {
     color: #DB2738;
     text-align: center;
+    font-weight: bold;
 }
 
 .match {
@@ -158,13 +152,14 @@ button {
     border-radius: 1em;
     padding: 0.8em;
     transform: rotate(-10deg);
-    margin-top: 5em;
-    margin-left: 4em;
+    margin-top: 3em;
+    margin-left: 2em;
 }
 
 .matchfoto {
     width: 100%;
-    height: auto;
+    height: 8em;
+    background-size: cover;
 }
 
 .match2 {
@@ -173,13 +168,13 @@ button {
     background-color: white;
     border-radius: 1em;
     padding: 0.8em;
-    margin-left: 10em;
-    top: -5em;
+    margin-left: 8em;
+    top: -6em;
     transform: rotate(10deg);
 }
 
-.matchsection {
-    margin-top: 3em;
+.naam {
+    text-align: center;
 }
 
 .ga {
@@ -188,24 +183,45 @@ button {
     width: 8em;
     height: auto;
     padding: .5em;
-    font-size: 1.4em;
+    font-size: 1.2em;
     border-radius: .5em;
     border: none;
     align-self: center;
+    text-decoration: none;
+    text-align: center;
 }
 
 /* matches */
+.matches {
+    margin-top: 0;
+    position: relative;
+}
 #match1 img {
     width: 6em;
     height: 100%;
     object-fit: cover;
     border-radius: 1em;
+    margin: 0;
 }
 
 #match1 h2 {
     position: relative;
     margin-left: 5.5em;
-    margin-top: -5.2em;
+    margin-top: -8.5em;
+}
+
+.lijst {
+    padding: 0;
+}
+
+#match1 {
+    border: 0.1em solid #334E58;
+    border-radius: 1em;
+    padding: .5em;
+    width: 95%;
+    height: 10em;
+    margin-top: 1em;
+    list-style-type: none;
 }
 
 #match1 p {

@@ -1,13 +1,15 @@
-<section>   
+<%- include('layouts/main.ejs'); %>
+
+<section class="matchpagina">   
     <h1 class="witteh1">Het is een match!</h1>
-    <p class="ondertekst">Zara + Joep</p>
+    <p class="ondertekst">Zara + <%= dogs.name %></p>
     <article class="match">
-        <img class="matchfoto" src="static/images/joep.jpeg" alt="">
-        <h2>Joep</h2>
+        <img class="matchfoto" src="static/images/zara.jpeg" alt="">
+        <h2 class="naam">Zara</h2>
     </article>
     <article class="match2">
-        <img class="matchfoto" src="static/images/joep.jpeg" alt="">
-        <h2>Joep</h2>
+        <img class="matchfoto" src="<%= dogs.img %>" alt="">
+        <h2 class="naam"><%= dogs.name %></h2>
     </article>
-    <a href="/matches">Ga naar match</a> 
+    <a class="ga" href="/matches">Ga naar match</a> 
 </section>

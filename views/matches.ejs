@@ -1,18 +1,18 @@
 <%- include('layouts/main.ejs'); %>
 <%- include('partials/header.ejs'); %>
 
-<section class="matchpagina">
+<section class="matches">
     <h1>Dit zijn jouw matches</h1>
 
-<ul id="match1">
+<ul class="lijst">
     <% likedDogs.forEach(function(likedDogs) { %>
-        <li>
+        <li id="match1">
             <img class="fotohond" src="<%= likedDogs.img %>" alt="">
             <h2><%= likedDogs.name %></h2>
             <p><%= likedDogs.description %></p>
             <form id="delete" action="/delete" method="POST">
                 <input name="liked" type="hidden" value="DELETE">
-                <input name="id" type="hidden" value="id">
+                <input name="id" type="hidden" value="<%= userID %>">
                 <button type="submit" id="verwijder">Verwijder match</button>  
             </form>         
         </li>

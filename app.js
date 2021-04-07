@@ -46,32 +46,6 @@ app.get('/', async (req, res) => {
   }
   });
 
-// when match show this page
-app.get('/match', async (req, res) => {
-  try {
-    res.render('match', { title: 'Home Page',});
-  }
-  catch (error) {
-    console.log(error);
-  }
-  });
-
-// matches / show liked dogs
-app.get('/matches', async (req, res) => {
-  try {
-    const likedDogs = await findAllLikedDogs();
-    if (likedDogs.length === 0) {
-      throw new Error('Required');
-    }
-    res.render('matches', {
-      likedDogs,
-    });
-  } catch (error) {
-    console.log(error);
-    res.redirect('/nomatches');
-  }
-})
-
 // dislike knop
 app.post('/dislike', (req, res) => {
   console.log(req.body);
@@ -83,14 +57,48 @@ app.post('/dislike', (req, res) => {
 })
 
 // like knop
-app.post('/like', (req, res) => {
+app.post('/like', (req, res, likedYou) => {
   console.log(req.body);
   DogModel
     .findOneAndUpdate({ _id: req.body.id }, { $set: { liked: true, visited: true } })
     .then((data) => {
-      res.redirect('/matches');       
+      if (likedYou === true){
+        return res.redirect('/match'); 
+      } else {
+        console.log(data);
+        return res.redirect('/'); 
+      }   
     });
 });
+
+// when match show this page
+app.get('/match', async (req, res) => {
+  try {
+    const allUsers = await findAllDogsNotVisited();
+    const dogs = allUsers[Math.floor(Math.random() * allUsers.length)];
+    res.render('match', { title: 'Home Page', dogs});
+  }
+  catch (error) {
+    console.log(error);
+  }
+  });
+
+// matches / show liked dogs
+app.get('/matches', async (req, res) => {
+  try {
+    const likedDogs = await findAllMatches();
+    const userID = likedDogs._id;
+    if (likedDogs.length === 0) {
+      throw new Error('Required');
+    }
+    res.render('matches', {
+      likedDogs, userID,
+    });
+  } catch (error) {
+    console.log(error);
+    res.redirect('/nomatches');
+  }
+})
 
 // route to page when there are no matches
 app.get('/nomatches', async (req, res) => {
@@ -112,11 +120,14 @@ app.get('/nomoredogs', async (req, res) => {
   }
   }); 
 
-//delete user from matches
-app.post('/delete', function(req, res, next) {
-  const id = req.body.id;
-  UserData.findByIdAndRemove(id).exec();
-  res.redirect('/matches');
+// delete user from matches
+app.post('/delete', (req, res) =>  {
+  DogModel
+  .findOneAndUpdate({ userID: req.body.userID }, { $set: { liked: false } })
+  .then((data) => {
+    console.log(data);
+    res.redirect('/matches');
+  });
  });
 
 // error page
@@ -131,7 +142,7 @@ async function findAllDogsNotVisited() {
 }
 
 // function to find matches
-async function findAllLikedDogs() {
+async function findAllMatches() {
   const data = await DogModel.find({ liked: true, likedYou: true }).lean();
   console.log(data);
   return data;
