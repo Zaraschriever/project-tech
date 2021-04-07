@@ -57,17 +57,12 @@ app.post('/dislike', (req, res) => {
 })
 
 // like knop
-app.post('/like', (req, res, likedYou) => {
-  console.log(req.body);
+app.post('/like', (req, res) => {
   DogModel
     .findOneAndUpdate({ _id: req.body.id }, { $set: { liked: true, visited: true } })
     .then((data) => {
-      if (likedYou === true){
-        return res.redirect('/match'); 
-      } else {
-        console.log(data);
-        return res.redirect('/'); 
-      }   
+      console.log(data)
+      res.redirect('/');   
     });
 });
 

@@ -1,5 +1,11 @@
 console.log('hallo');
 
+document.addEventListener('click', function(){
+  document.getElementById('match1');
+  el.remove();
+});
+
+
 // dislikeUser();
 
 // function dislikeUser() {
@@ -12,12 +18,12 @@ console.log('hallo');
 
 // hideUser();
 
-function remove() {
-  const element = document.getElementById('match1').addEventListener('click');
-  element.remove();
-}
+// function remove() {
+//   const element = document.getElementById('match1').addEventListener('click');
+//   element.remove();
+// }
 
-remove();
+// remove();
 
 // function clickDelete() {
 //     document.getElementById('verwijder').addEventListener('submit', deleteMatch);
