@@ -95,6 +95,15 @@ app.get('/matches', async (req, res) => {
   }
 })
 
+app.get('/matches2', async (req, res) => {
+  try {
+    res.render('matches2', { title: 'Home Page',});
+  }
+  catch (error) {
+    console.log(error);
+  }
+  });
+
 // route to page when there are no matches
 app.get('/nomatches', async (req, res) => {
   try {

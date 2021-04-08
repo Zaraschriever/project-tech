@@ -6,14 +6,14 @@
   "scripts": {
     "start": "nodemon app.js",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "build": "echo \"Hoi!\" && exit 0"
   },
   "author": "Zara Schriever",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
-    "build": "^0.1.4",
     "camelcase": "^6.2.0",
     "concurrently": "^6.0.0",
     "dotenv": "^8.2.0",

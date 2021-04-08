@@ -37,10 +37,28 @@ header img {
     margin-left: 8em;
 }
 
-.hartje {
+#hartje {
+    background-image: url("../images/matches.png");
+    background-color: transparent;
+    background-size: cover;
+    text-indent: -999em;
     position: absolute;
-    width: 2em;
+    margin-top: 1em;
     margin-left: 3em;
+    width: 2.3em;
+    height: 2.3em;
+}
+
+#geliked {
+    background-image: url("../images/matchesrood.png");  
+    background-color: transparent;
+    background-size: cover;
+    text-indent: -999em;
+    position: absolute;
+    margin-top: 1em;
+    margin-left: 3em;
+    width: 2.3em;
+    height: 2.3em;
 }
 
 /* profielen */
@@ -196,7 +214,7 @@ button {
     margin-top: 0;
     position: relative;
 }
-#match1 img {
+.lijst li img {
     width: 6em;
     height: 100%;
     object-fit: cover;
@@ -204,7 +222,7 @@ button {
     margin: 0;
 }
 
-#match1 h2 {
+.lijst li h2 {
     position: relative;
     margin-left: 5.5em;
     margin-top: -8.5em;
@@ -214,7 +232,7 @@ button {
     padding: 0;
 }
 
-#match1 {
+.lijst li {
     border: 0.1em solid #334E58;
     border-radius: 1em;
     padding: .5em;
@@ -224,14 +242,14 @@ button {
     list-style-type: none;
 }
 
-#match1 p {
+.lijst li p {
     position: relative;
     margin-left: 8.5em;
     margin-top: -.1em;
     font-size: 0.8em;
 }
 
-#match1 button {
+.lijst li button {
     width: 10em;
     height: 2em;
     border-radius: .5em;

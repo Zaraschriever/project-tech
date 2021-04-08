@@ -1,46 +1,40 @@
-console.log('hallo');
-
-document.addEventListener('click', function(){
-  document.getElementById('match1');
-  el.remove();
-});
+//hartje wordt rood bij like
 
 
-// dislikeUser();
+function submitFormulier(){
+    document.getElementById('like').addEventListener('submit', clickedLiked);
+}
 
-// function dislikeUser() {
-//   document.getElementById('dislike').addEventListener('submit', hideUser);
-// }
+function clickedLiked(){
+    document.getElementById('hartje').id='geliked';
+}
 
-// function hideUser() {
-//   document.getElementById('user2').style.display = 'none';
-// }
 
-// hideUser();
+//honden verwijderen uit lijst
 
-// function remove() {
-//   const element = document.getElementById('match1').addEventListener('click');
-//   element.remove();
-// }
+const deleteButton = document.getElementById('verwijder');
+const profiel = document.getElementById('match1');
 
-// remove();
+deleteButton.addEventListener('click', verwijder);
 
-// function clickDelete() {
-//     document.getElementById('verwijder').addEventListener('submit', deleteMatch);
-// }
+function verwijder(){
+    profiel.remove();
+}
 
-// function deleteMatch() {
-//   document.getElementById('match1').style.display = 'none'.;
-// }
+const deleteButtonTwo = document.getElementById('verwijder2');
+const profielTwo = document.getElementById('match2');
 
-// deleteMatch();
+deleteButtonTwo.addEventListener('click', verwijder2);
 
-// function clickedLiked() {
-//   document.getElementById('user2').id = 'geliked';
-// }
+function verwijder2(){
+    profielTwo.remove();
+}
 
-// showUser();
+const deleteButtonThree = document.getElementById('verwijder3');
+const profielThree = document.getElementById('match3');
 
-// function showUser() {
-//   document.getElementById('user2').style.display = 'block';
-// }
+deleteButtonThree.addEventListener('click', verwijder3);
+
+function verwijder3(){
+    profielThree.remove();
+}
